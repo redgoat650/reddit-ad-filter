@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Ad Filter",
+  "version": "1.0",
+  "description": "Filters out sponsored posts on Reddit",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
