@@ -16,18 +16,18 @@ function removeAdComments() {
 
 // Function to remove ad sidebar
 function removeSidebarAds() {
-    const adSidebar = document.getElementById('shreddit-sidebar-ad');
-    if (adSidebar) {
-        adSidebar.style.display = 'none';
+    const adSidebar = document.getElementsByTagName('shreddit-sidebar-ad');
+    for (const ad of adSidebar) {
+        ad.style.display = 'none';
     }
 }
 
 
 // Function to remove comment page ad
 function removeCommentPageAds() {
-    const adCommentPage = document.getElementById('shreddit-comments-page-ad');
-    if (adCommentPage) {
-        adCommentPage.style.display = 'none';
+    const adCommentPage = document.getElementsByTagName('shreddit-comments-page-ad');
+    for (const ad of adCommentPage) {
+        ad.style.display = 'none';
     }
 }
 
