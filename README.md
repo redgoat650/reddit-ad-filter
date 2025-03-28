@@ -1,6 +1,6 @@
 # Reddit Ad Filter Chrome Extension
 
-A simple Chrome extension that hides sponsored posts (`<shreddit-ad-post>` elements) on Reddit.
+A simple Chrome extension that hides sponsored posts and other ad elements on Reddit.
 
 ## Installation
 
@@ -11,4 +11,4 @@ A simple Chrome extension that hides sponsored posts (`<shreddit-ad-post>` eleme
 
 ## How it works
 
-The extension automatically hides any `<shreddit-ad-post>` elements on Reddit pages. It works with dynamically loaded content, so it will continue to hide ads as you scroll through the feed.
+The extension automatically hides any `<shreddit-ad-post>` and similar ad elements on Reddit pages. It works with dynamically loaded content, so it will continue to hide ads as you scroll through the feed.
