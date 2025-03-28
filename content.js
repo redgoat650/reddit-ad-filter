@@ -6,12 +6,22 @@ function removeAdPosts() {
     }
 }
 
+// Function to remove ad comments
+function removeAdComments() {
+    const adComments = document.getElementsByTagName('shreddit-comment-tree-ad');
+    for (const ad of adComments) {
+        ad.style.display = 'none';
+    }
+}
+
 // Initial removal
 removeAdPosts();
+removeAdComments();
 
 // Create observer to handle dynamically loaded content
 const observer = new MutationObserver(() => {
     removeAdPosts();
+    removeAdComments();
 });
 
 // Start observing the document for changes
