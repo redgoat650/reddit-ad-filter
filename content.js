@@ -14,14 +14,35 @@ function removeAdComments() {
     }
 }
 
+// Function to remove ad sidebar
+function removeSidebarAds() {
+    const adSidebar = document.getElementById('shreddit-sidebar-ad');
+    if (adSidebar) {
+        adSidebar.style.display = 'none';
+    }
+}
+
+
+// Function to remove comment page ad
+function removeCommentPageAds() {
+    const adCommentPage = document.getElementById('shreddit-comments-page-ad');
+    if (adCommentPage) {
+        adCommentPage.style.display = 'none';
+    }
+}
+
 // Initial removal
 removeAdPosts();
 removeAdComments();
+removeSidebarAds();
+removeCommentPageAds();
 
 // Create observer to handle dynamically loaded content
 const observer = new MutationObserver(() => {
     removeAdPosts();
     removeAdComments();
+    removeSidebarAds();
+    removeCommentPageAds();
 });
 
 // Start observing the document for changes
